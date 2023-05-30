@@ -42,7 +42,19 @@ td{
 
 .buttonhover:hover{
 
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background: linear-gradient(to left, #3E3E3E, #979797, #2C2C2C); */
   border-radius: 5px;
 
+}
+
+&::-webkit-slider-thumb {
+
+
+  background: white;
+  cursor: pointer;
+
+
+  &:hover {
+    background: white
+  }
 }

@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Logo from './logo';
 import { ReactSVG } from 'react-svg';
 
@@ -24,7 +24,66 @@ export default function Prompt() {
       </label>
     );
   }
+  function ToggleSwitch2() {
+    const [isCheckedd, setIsCheckedd] = useState(false);
+  
+    const handleChange = () => {
+      setIsCheckedd(!isCheckedd);
+    };
+  
+    return (
+      <label htmlFor="Toggle4" className="inline-flex items-center  border ">
+        <input id="Toggle4" type="checkbox" className="hidden peer" checked={isCheckedd} onChange={handleChange} />
+        <span className={`flex flex-col select-none items-center gap-2  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] px-3 py-1 text-[10px] ${
+              isCheckedd && 'bg-gradient-to-tr text-white'
+            }`}>Text</span>
+        <span className={`px-3 py-1 text-[10px]  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] ${
+              !isCheckedd && 'bg-gradient-to-tr text-white'
+            }`}>Select</span>
+      </label>
+    );
+  }
+  const [value, setValue] = useState<number>(50);
+ function RangeSLider(): JSX.Element {
 
+    
+  
+    const handleRangeChange = (event: ChangeEvent<HTMLInputElement>): void => {
+      setValue(Number(event.target.value));
+    };
+  
+    const getRangeBackground = (): string => {
+      const percentage = (value - 1) / 99 * 100;
+      const color1 = '#FFFFFF'; // Pink color
+      const color2 = '#FFFFFF26'; // Purple colorbackground: #FFFFFF26;
+
+      return `linear-gradient(90deg, ${color1} ${percentage}%, ${color2} ${percentage}%)`;
+    };
+  
+    return (
+      <div>
+      
+        <input
+          id="range"
+          type="range"
+          value={value}
+          min={1}
+          max={100}
+          step={1}
+          
+          onChange={handleRangeChange}
+          className="w-full h-0.5 bg-gradient-to-r from-white to-white rounded-full appearance-none cursor-pointer accent-white"
+          style={{
+            background: getRangeBackground(),
+            outline: 'none',
+            WebkitAppearance: 'none',
+          }}
+        />
+      
+      </div>
+    );
+  }
+  
   return (
     <section className='relative bg-themeSlate flex-col items-center flex  w-full min-h-auto'>
   <div className='absolute z-50 flex'>
@@ -72,7 +131,7 @@ export default function Prompt() {
     </tr>
     <tr>
       <td >
-<ToggleSwitch/>
+<ToggleSwitch2/>
 
 </td>
       <td className='flex justify-between items-center'>
@@ -96,14 +155,14 @@ export default function Prompt() {
       <span className='pr-4'>Context  </span>
     </div>
 
-    <div className='flex items-center text-xs font-medium leading-loose p-5 pb-1 text-white '>
+    <div className='flex items-center text-xs font-medium leading-loose p-5 pb-1 pl-0 text-white '>
       <span><ReactSVG src={"/assets/plus.svg"} /></span><span className='pl-2'>Add</span>
     </div>
 </div>
 
 <div className='justify-center text-center'>
 <input
-  className="w-[400px] min-h-[38px] p-2 rounded-md bg-transparent m-1 text-[10px] whitespace-normal align-top"
+  className="w-[400px] min-h-[38px] p-2 rounded-md bg-transparent m-1 ml-0 text-[10px] whitespace-normal align-top"
   placeholder="You can import datasets as context"
 />  
 </div>
@@ -112,23 +171,43 @@ export default function Prompt() {
       <p className='pr-4'>Configuration Settings  </p>
       <p className='text-[10px]'>model</p>
     </div>
-    <div className='flex  items-center mt-5 pl-3'>
-          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3'>
+    <div className='flex  items-center mt-2 pl-3'>
+          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3 hover:bg-gradient-to-r from-[#2C2C2C] via-[#2C2C2C] to-[#2C2C2C]'>
           <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
           <p  className='text-[10px] ml-2'>GPT-4</p>
 
           </div>
-          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3'>
+          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3 hover:bg-gradient-to-r from-[#2C2C2C] via-[#2C2C2C] to-[#2C2C2C]'>
           <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
           <p  className='text-[10px] ml-2'>GPT-4</p>
 
           </div>
-          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4'>
+          <div className='flex buttonhover   items-center pt-1 pb-1 pl-1 pr-4 mr-3 hover:bg-gradient-to-r from-[#2C2C2C] via-[#2C2C2C] to-[#2C2C2C]'>
           <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
           <p  className='text-[10px] ml-2'>GPT-4</p>
 
           </div>
+
+
+         
       </div> 
+<div className='w-full p-5 pb-0  flex items-center'>
+
+<p className='text-[10px] text-white'>temperature</p>
+</div>
+      <div className='w-full p-5 pb-1 pt-0 flex items-center'>
+      <div className='w-60'><RangeSLider/></div><p className='w-20 text-[10px] text-white ml-4 mt-3'>{value}%</p>
+
+          </div>
+          <div className='w-full p-5 pb-0 items-center'>
+
+<p className='text-[10px] text-white'>system message</p>
+<input
+  className="w-[400px] min-h-[82px] p-2 rounded-md bg-transparent mt-2 text-[10px] whitespace-normal align-top"
+  placeholder="You are a multilingual assistant that translates"
+/>  
+</div>
+
         </div>
 
     

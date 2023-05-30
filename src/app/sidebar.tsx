@@ -42,34 +42,34 @@ export default function Sidebar() {
 const menus = [
   {
     title: 'home',
-    icon: '/assets/bar.svg',
+    icon: '/assets/home.svg',
   },
   {
     title: 'chat',
-    icon: '/assets/bar.svg',
+    icon: '/assets/chat.svg',
   },
   {
     title: 'create',
-    icon: '/assets/bar.svg',
+    icon: '/assets/create.svg',
   },
   {
     title: 'community',
-    icon: '/assets/bar.svg',
+    icon: '/assets/community.svg',
   },
   {
-    title: 'collection',
-    icon: '/assets/bar.svg',
+    title: 'collections',
+    icon: '/assets/collections.svg',
   },
   {
     title: 'bounty',
-    icon: '/assets/bar.svg',
+    icon: '/assets/bounty.svg',
   },
   {
-    title: 'home',
-    icon: '/assets/bar.svg',
+    title: 'learn',
+    icon: '/assets/learn.svg',
   },
   {
-    title: 'home',
-    icon: '/assets/bar.svg',
+    title: 'flux',
+    icon: '/assets/flux.svg',
   },
 ];

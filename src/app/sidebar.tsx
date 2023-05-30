@@ -1,10 +1,31 @@
+'use client';
 import Image from 'next/image';
-import Logo from './icons/Logo';
+import { useState } from 'react';
+import Logo from './logo';
+import { ReactSVG } from 'react-svg';
 
 export default function Sidebar() {
+  const [isSelected, setIsSelected] = useState('chat');
+
   return (
-    <section className='relative bg-themeSlate w-[77px] min-h-screen'>
+    <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1024px]'>
       <Logo />
+
+      {/* #todo menus */}
+      <div className='absolute z-50 space-y-2 top-32'>
+        {menus.map((el) => (
+          <div
+            onClick={() => setIsSelected(el.title)}
+            key={el.title}
+            className={`flex flex-col items-center gap-2 cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl px-1.5 py-2 ${
+              isSelected === el.title && 'bg-gradient-to-tr'
+            }`}
+          >
+            <ReactSVG src={el.icon} />
+            <p className='capitalize text-[8px]'>{el.title}</p>
+          </div>
+        ))}
+      </div>
 
       {/* #fix bar section */}
       <Image
@@ -17,3 +38,38 @@ export default function Sidebar() {
     </section>
   );
 }
+
+const menus = [
+  {
+    title: 'home',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'chat',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'create',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'community',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'collection',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'bounty',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'home',
+    icon: '/assets/bar.svg',
+  },
+  {
+    title: 'home',
+    icon: '/assets/bar.svg',
+  },
+];

@@ -25,3 +25,17 @@
 
 
 }
+
+table th,tr{
+  font-size: 10px;
+}
+table th,tr{
+  padding: 10px;
+}
+td{
+  padding: 10px 10px 0px 10px;
+}
+.border{
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.2)
+}

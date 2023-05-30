@@ -1,22 +1,20 @@
-import React from 'react'
-
-
-
+import Image from 'next/image';
+import { useState } from 'react';
+import Logo from './logo';
+import { ReactSVG } from 'react-svg';
 
 const Prompts = () => {
   return (
-    <Selection>
-
-        <Image
+    <div className='relative bg-themeSlate flex-col'>
+      <Image
         className='absolute top-0 right-0'
-        src={'/assets/background.svg'}
+        src='icons/background.svg'
         alt=''
-        width={70}
-        height={1024}
+        width={100}
+        height={100}
       />
+    </div>
+  );
+};
 
-    </Selection>
-  )
-}
-
-export default Prompts
+export default Prompts;

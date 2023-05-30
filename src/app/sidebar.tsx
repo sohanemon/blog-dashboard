@@ -11,7 +11,6 @@ import { useState } from 'react';
 
 export default function Sidebar() {
   const [isSelected, setIsSelected] = useState('chat');
-  console.log('🛑 ~ Sidebar ~ isSelected:', isSelected);
 
   return (
     <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1024px]'>

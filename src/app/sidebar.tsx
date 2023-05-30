@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Logo from './logo';
+import { ReactSVG } from 'react-svg';
 
 export default function Sidebar() {
   const [isSelected, setIsSelected] = useState('chat');
@@ -20,7 +21,7 @@ export default function Sidebar() {
               isSelected === el.title && 'bg-gradient-to-tr'
             }`}
           >
-            {el.icon}
+            <ReactSVG src={el.icon} />
             <p className='capitalize text-[8px]'>{el.title}</p>
           </div>
         ))}
@@ -41,34 +42,34 @@ export default function Sidebar() {
 const menus = [
   {
     title: 'home',
-    icon: <HomeIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'chat',
-    icon: <ChatIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'create',
-    icon: <CreateIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'community',
-    icon: <CommunityIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'collection',
-    icon: <CollectionsIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'bounty',
-    icon: <BountyIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'home',
-    icon: <HomeIcon />,
+    icon: '/assets/bar.svg',
   },
   {
     title: 'home',
-    icon: <HomeIcon />,
+    icon: '/assets/bar.svg',
   },
 ];

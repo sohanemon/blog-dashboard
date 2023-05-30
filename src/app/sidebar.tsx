@@ -1,13 +1,7 @@
 'use client';
 import Image from 'next/image';
-import Logo from './icons/Logo';
-import HomeIcon from './icons/HomeIcon';
-import ChatIcon from './icons/chatIcon';
-import CreateIcon from './icons/CreateIcon';
-import CommunityIcon from './icons/CommunityIcon';
-import CollectionsIcon from './icons/CollectionsIcon';
-import BountyIcon from './icons/BountyIcon';
 import { useState } from 'react';
+import Logo from './logo';
 
 export default function Sidebar() {
   const [isSelected, setIsSelected] = useState('chat');

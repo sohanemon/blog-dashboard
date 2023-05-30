@@ -21,9 +21,9 @@ export default function Sidebar() {
       <div className='absolute z-50 space-y-5 top-40'>
         {menus.map((el) => (
           <div
-            onClick={() => console.log('first')}
+            onClick={() => setIsSelected(el.title)}
             key={el.title}
-            className={`flex flex-col items-center gap-2 from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl p-2 ${
+            className={`flex flex-col items-center gap-2 from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl px-1.5 py-2 ${
               isSelected === el.title && 'bg-gradient-to-tr'
             }`}
           >

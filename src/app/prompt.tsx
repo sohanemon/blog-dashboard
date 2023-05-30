@@ -91,17 +91,47 @@ export default function Prompt() {
   </tbody>
 </table>
 </div>
-<div className='flex justify-between'>
-    <div className='flex items-center text-xs font-medium leading-loose p-5 text-white  '>
-      <span className='pr-4'>Veriables  </span><span><ReactSVG src={"/assets/info.svg"} /></span>
+<div className='flex justify-between mt-5'>
+    <div className='flex items-center text-xs font-medium leading-loose p-5 pb-1 text-white  '>
+      <span className='pr-4'>Context  </span>
     </div>
 
-    <div className='flex items-center text-xs font-medium leading-loose p-5 text-white '>
+    <div className='flex items-center text-xs font-medium leading-loose p-5 pb-1 text-white '>
       <span><ReactSVG src={"/assets/plus.svg"} /></span><span className='pl-2'>Add</span>
     </div>
 </div>
+
+<div className='justify-center text-center'>
+<input
+  className="w-[400px] min-h-[38px] p-2 rounded-md bg-transparent m-1 text-[10px] whitespace-normal align-top"
+  placeholder="You can import datasets as context"
+/>  
+</div>
+
+    <div className=' items-center text-xs font-medium leading-loose mt-5 p-5 pb-1 text-white  '>
+      <p className='pr-4'>Configuration Settings  </p>
+      <p className='text-[10px]'>model</p>
+    </div>
+    <div className='flex  items-center mt-5 pl-3'>
+          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3'>
+          <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
+          <p  className='text-[10px] ml-2'>GPT-4</p>
+
+          </div>
+          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4 mr-3'>
+          <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
+          <p  className='text-[10px] ml-2'>GPT-4</p>
+
+          </div>
+          <div className='flex buttonhover  items-center pt-1 pb-1 pl-1 pr-4'>
+          <ReactSVG src={"/assets/gptblack.svg"} height={"22px"} width={"22px"} />
+          <p  className='text-[10px] ml-2'>GPT-4</p>
+
+          </div>
+      </div> 
         </div>
-       
+
+    
 
 
 

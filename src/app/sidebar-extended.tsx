@@ -1,9 +1,18 @@
+import Image from 'next/image';
+import { ReactSVG } from 'react-svg';
+
 export default function SidebarExtended() {
   return (
     <section className='border-r w-52 border-white/20'>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea fuga quae
-      fugit officia doloremque, error sunt veritatis est quidem. Itaque, natus
-      delectus. Expedita magnam hic quas vel ratione a commodi.
+      <div className='flex'>
+        <Image
+          className='bg-red-500'
+          src='/assets/camera-fill.svg'
+          alt=''
+          width={24}
+          height={24}
+        />
+      </div>
     </section>
   );
 }

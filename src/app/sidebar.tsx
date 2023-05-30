@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Sidebar() {
   return (
-    <section className='relative bg-themeSlate w-[77px] min-h-screen h-full'>
+    <section className='relative bg-themeSlate w-[77px] min-h-screen'>
       <Image
         className='absolute top-0 right-0'
         src={'/assets/bar.svg'}

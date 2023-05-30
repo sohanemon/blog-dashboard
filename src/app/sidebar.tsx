@@ -18,7 +18,7 @@ export default function Sidebar() {
       <Logo />
 
       {/* #todo menus */}
-      <div className='absolute z-50 space-y-5 top-40'>
+      <div className='absolute z-50 space-y-2 top-32'>
         {menus.map((el) => (
           <div
             onClick={() => setIsSelected(el.title)}

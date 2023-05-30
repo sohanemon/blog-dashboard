@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Logo from './icons/Logo';
 import HomeIcon from './icons/HomeIcon';
+import ChatIcon from './icons/chatIcon';
+import CreateIcon from './icons/CreateIcon';
+import CommunityIcon from './icons/CommunityIcon';
+import CollectionsIcon from './icons/CollectionsIcon';
+import BountyIcon from './icons/BountyIcon';
 
 export default function Sidebar() {
   return (
@@ -35,24 +40,24 @@ const menus = [
     icon: <HomeIcon />,
   },
   {
-    title: 'home',
-    icon: <HomeIcon />,
+    title: 'chat',
+    icon: <ChatIcon />,
   },
   {
-    title: 'home',
-    icon: <HomeIcon />,
+    title: 'create',
+    icon: <CreateIcon />,
   },
   {
-    title: 'home',
-    icon: <HomeIcon />,
+    title: 'community',
+    icon: <CommunityIcon />,
   },
   {
-    title: 'home',
-    icon: <HomeIcon />,
+    title: 'collection',
+    icon: <CollectionsIcon />,
   },
   {
-    title: 'home',
-    icon: <HomeIcon />,
+    title: 'bounty',
+    icon: <BountyIcon />,
   },
   {
     title: 'home',

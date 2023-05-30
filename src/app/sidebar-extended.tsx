@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { ReactSVG } from 'react-svg';
 
@@ -24,8 +25,9 @@ export default function SidebarExtended() {
       {/* more menu */}
       <div>
         {data?.map((el) => (
-          <div key={el.title}>
+          <div key={el.title} className='flex items-center gap-3 capitalize'>
             <ReactSVG src={el.icon} />
+            <p className='text-xs font-medium leading-loose'>{el.title}</p>
           </div>
         ))}
       </div>

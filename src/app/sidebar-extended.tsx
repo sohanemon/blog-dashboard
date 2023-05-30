@@ -6,7 +6,7 @@ export default function SidebarExtended() {
     <section className='border-r w-52 border-white/20'>
       <div className='flex'>
         <Image
-          className='bg-red-500'
+          className='p-3 bg-themeLightSlate'
           src='/assets/camera-fill.svg'
           alt=''
           width={24}

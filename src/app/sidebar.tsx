@@ -18,11 +18,11 @@ export default function Sidebar() {
             onClick={() => setIsSelected(el.title)}
             key={el.title}
             className={`flex flex-col items-center gap-2 cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl px-1.5 py-2 ${
-              isSelected === el.title && 'bg-gradient-to-tr'
+              isSelected === el.title && 'bg-gradient-to-tr text-white'
             }`}
           >
             <ReactSVG src={el.icon} />
-            <p className='capitalize text-[8px]'>{el.title}</p>
+            <p className='capitalize font-semibold text-[8px]'>{el.title}</p>
           </div>
         ))}
       </div>

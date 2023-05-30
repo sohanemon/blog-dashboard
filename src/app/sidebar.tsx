@@ -9,15 +9,15 @@ import BountyIcon from './icons/BountyIcon';
 
 export default function Sidebar() {
   return (
-    <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-screen'>
+    <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1024px]'>
       <Logo />
 
       {/* #todo menus */}
-      <div className='space-y-5'>
+      <div className='absolute space-y-5 top-40'>
         {menus.map((el) => (
           <div key={el.title} className='flex flex-col items-center gap-2'>
             {el.icon}
-            <p className='capitalize'>{el.title}</p>
+            <p className='capitalize text-[8px]'>{el.title}</p>
           </div>
         ))}
       </div>

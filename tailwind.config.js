@@ -11,6 +11,7 @@ module.exports = {
         themeBase: '#1A1B1E',
         themeSlate: '#2E3033',
         themeDarkGray: 'rgba(26, 27, 30, 0.5)',
+        themeText: '#B8B8B8',
       },
     },
   },

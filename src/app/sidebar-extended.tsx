@@ -1,8 +1,11 @@
 'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import { ReactSVG } from 'react-svg';
 
 export default function SidebarExtended() {
+  const [isSelected, setIsSelected] = useState('prompt');
+
   return (
     <section className='px-4 border-r max-w-[14rem] py-7 border-white/20'>
       <div className='flex gap-2'>
@@ -23,9 +26,15 @@ export default function SidebarExtended() {
       </div>
 
       {/* more menu */}
-      <div>
+      <div className='mt-5 space-y-2'>
         {data?.map((el) => (
-          <div key={el.title} className='flex items-center gap-3 capitalize'>
+          <div
+            onClick={() => setIsSelected(el.title)}
+            key={el.title}
+            className={`flex items-center gap-3 px-3 py-3 capitalize cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl ${
+              isSelected === el.title && 'bg-gradient-to-tr text-white'
+            }`}
+          >
             <ReactSVG src={el.icon} />
             <p className='text-xs font-medium leading-loose'>{el.title}</p>
           </div>

@@ -20,6 +20,10 @@ export default function SidebarExtended() {
           </div>
         </div>
       </div>
+
+      {/* more menu */}
     </section>
   );
 }
+
+const data = [];

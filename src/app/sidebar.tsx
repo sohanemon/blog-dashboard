@@ -8,7 +8,7 @@ export default function Sidebar() {
   const [isSelected, setIsSelected] = useState('chat');
 
   return (
-    <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1024px]'>
+    <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1010px]'>
       <Logo />
 
       {/* #todo menus */}
@@ -18,15 +18,18 @@ export default function Sidebar() {
             onClick={() => setIsSelected(el.title)}
             key={el.title}
             className={`flex flex-col items-center gap-2 cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl px-1.5 py-2 ${
-              isSelected === el.title && 'bg-gradient-to-tr'
+              isSelected === el.title && 'bg-gradient-to-tr text-white'
             }`}
           >
             <ReactSVG src={el.icon} />
-            <p className='capitalize text-[8px]'>{el.title}</p>
+            <p className='capitalize font-semibold text-[8px]'>{el.title}</p>
           </div>
         ))}
       </div>
-
+      <ReactSVG
+        className='absolute z-50 cursor-pointer bottom-8'
+        src='/assets/logout.svg'
+      />
       {/* #fix bar section */}
       <Image
         className='absolute top-0 right-0'
@@ -42,34 +45,34 @@ export default function Sidebar() {
 const menus = [
   {
     title: 'home',
-    icon: '/assets/bar.svg',
+    icon: '/assets/home.svg',
   },
   {
     title: 'chat',
-    icon: '/assets/bar.svg',
+    icon: '/assets/chat.svg',
   },
   {
     title: 'create',
-    icon: '/assets/bar.svg',
+    icon: '/assets/create.svg',
   },
   {
     title: 'community',
-    icon: '/assets/bar.svg',
+    icon: '/assets/community.svg',
   },
   {
-    title: 'collection',
-    icon: '/assets/bar.svg',
+    title: 'collections',
+    icon: '/assets/collections.svg',
   },
   {
     title: 'bounty',
-    icon: '/assets/bar.svg',
+    icon: '/assets/bounty.svg',
   },
   {
-    title: 'home',
-    icon: '/assets/bar.svg',
+    title: 'learn',
+    icon: '/assets/learn.svg',
   },
   {
-    title: 'home',
-    icon: '/assets/bar.svg',
+    title: 'flux',
+    icon: '/assets/flux.svg',
   },
 ];

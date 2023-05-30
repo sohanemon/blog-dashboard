@@ -5,75 +5,39 @@ import Logo from './logo';
 import { ReactSVG } from 'react-svg';
 
 export default function Prompt() {
-  function ToggleSwitch() {
-    const [isChecked, setIsChecked] = useState(false);
+  // function ToggleSwitch2() {
+  //   const [isCheckedd, setIsCheckedd] = useState(false);
 
-    const handleChange = () => {
-      setIsChecked(!isChecked);
-    };
+  //   const handleChange = () => {
+  //     setIsCheckedd(!isCheckedd);
+  //   };
 
-    return (
-      <label
-        htmlFor='Toggle4'
-        className='inline-flex items-center border cursor-pointer '
-      >
-        <input
-          id='Toggle4'
-          type='checkbox'
-          className='hidden peer'
-          checked={isChecked}
-          onChange={handleChange}
-        />
-        <span
-          className={`flex flex-col select-none items-center gap-2 cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] px-3 py-1 text-[10px] ${
-            isChecked && 'bg-gradient-to-tr text-white'
-          }`}
-        >
-          Text
-        </span>
-        <span
-          className={`px-3 py-1 text-[10px]  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] ${
-            !isChecked && 'bg-gradient-to-tr text-white'
-          }`}
-        >
-          Select
-        </span>
-      </label>
-    );
-  }
-  function ToggleSwitch2() {
-    const [isCheckedd, setIsCheckedd] = useState(false);
-
-    const handleChange = () => {
-      setIsCheckedd(!isCheckedd);
-    };
-
-    return (
-      <label htmlFor='Toggle4' className='inline-flex items-center border '>
-        <input
-          id='Toggle4'
-          type='checkbox'
-          className='hidden peer'
-          checked={isCheckedd}
-          onChange={handleChange}
-        />
-        <span
-          className={`flex flex-col select-none items-center gap-2  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] px-3 py-1 text-[10px] ${
-            isCheckedd && 'bg-gradient-to-tr text-white'
-          }`}
-        >
-          Text
-        </span>
-        <span
-          className={`px-3 py-1 text-[10px]  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] ${
-            !isCheckedd && 'bg-gradient-to-tr text-white'
-          }`}
-        >
-          Select
-        </span>
-      </label>
-    );
-  }
+  //   return (
+  //     <label htmlFor='Toggle4' className='inline-flex items-center border '>
+  //       <input
+  //         id='Toggle4'
+  //         type='checkbox'
+  //         className='hidden peer'
+  //         checked={isCheckedd}
+  //         onChange={handleChange}
+  //       />
+  //       <span
+  //         className={`flex flex-col select-none items-center gap-2  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] px-3 py-1 text-[10px] ${
+  //           isCheckedd && 'bg-gradient-to-tr text-white'
+  //         }`}
+  //       >
+  //         Text
+  //       </span>
+  //       <span
+  //         className={`px-3 py-1 text-[10px]  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] ${
+  //           !isCheckedd && 'bg-gradient-to-tr text-white'
+  //         }`}
+  //       >
+  //         Select
+  //       </span>
+  //     </label>
+  //   );
+  // }
   const [value, setValue] = useState<number>(50);
   function RangeSLider(): JSX.Element {
     const handleRangeChange = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -174,7 +138,7 @@ export default function Prompt() {
                 </tr>
                 <tr>
                   <td>
-                    <ToggleSwitch2 />
+                    <ToggleSwitch />
                   </td>
                   <td className='flex items-center justify-between'>
                     <span>
@@ -322,5 +286,42 @@ export default function Prompt() {
         height={375}
       />
     </section>
+  );
+}
+
+function ToggleSwitch() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  return (
+    <label
+      htmlFor='Toggle4'
+      className='inline-flex items-center border cursor-pointer '
+    >
+      <input
+        id='Toggle4'
+        type='checkbox'
+        className='hidden peer'
+        checked={isChecked}
+        onChange={handleChange}
+      />
+      <span
+        className={`flex flex-col select-none items-center gap-2 cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] px-3 py-1 text-[10px] ${
+          isChecked && 'bg-gradient-to-tr text-white'
+        }`}
+      >
+        Text
+      </span>
+      <span
+        className={`px-3 py-1 text-[10px]  from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-[5px] ${
+          !isChecked && 'bg-gradient-to-tr text-white'
+        }`}
+      >
+        Select
+      </span>
+    </label>
   );
 }

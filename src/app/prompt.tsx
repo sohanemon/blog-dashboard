@@ -87,12 +87,13 @@ export default function Prompt() {
   return (
     <section className='relative bg-themeSlate flex-col items-center flex  w-full min-h-auto'>
   <div className='absolute z-50 flex'>
+    {/* prompt starts */}
       <div className='w-[448px] min-h-[1010px] rounded-lg bg-rgba-opacity m-5 mb-0'>
       <p className='text-xs font-medium leading-loose p-5 text-white  pb-0'>Prompt</p>
-      <input
+      <p
   className="w-[400px] min-h-[149px] p-2 rounded-md bg-transparent m-5 text-[10px] whitespace-normal align-top"
-  placeholder="You are a multilingual assistant that translates"
-/>  
+ 
+>You are a multilingual assistant that translates from english to output_language: the text that needs to be translated</p> 
 
 <div className='flex justify-between'>
     <div className='flex items-center text-xs font-medium leading-loose p-5 text-white  '>
@@ -209,21 +210,38 @@ export default function Prompt() {
 </div>
 
         </div>
-
-    
-
-
+{/* prompts ends */}
+    {/* preview and text starts*/}
 
 
 
+        <div className='realtive w-[542px] min-h-[1010px]t rounded-lg bg-rgba-opacity m-5 ml-0'>
+        <p className='text-xs font-medium leading-loose p-5 text-white  pb-0'>Preview and Test</p>
+            <div className='p-5 pb-0'>
+                  <div className='w-full flex justify-end items-center'>
+                    <p className='rounded-md bg-transparent p-3 mt-2 text-[10px] whitespace-normal '>You are a multilingual assistant that translates from english to French: Hello!</p>
+                    <ReactSVG src={"/assets/user.svg"} className='ml-3'/>
+                  </div>
+                  <div className='w-full flex justify-start items-start'>
+                  <ReactSVG src={"/assets/chatgpt.svg"}/>
+                    <p className='rounded-md bg-transparent p-3 mt-2 ml-3 text-[10px] whitespace-normal '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                   
+                  </div>
+            </div>
 
+            <div className="absolute bottom-0 p-5 pb-0 mb-20">
+              <div className='flex '>
+              <input
+  className="w-[400px] p-3 rounded  mt-0  text-[10px] whitespace-normal align-top"
+/>  
 
-
-
-
-        <div className='w-[542px] min-h-[1010px]t rounded-lg bg-rgba-opacity m-5 ml-0'>
-            Preview and Test
+<button className='flex items-center bg-white rounded pl-4 pr-4 pt-0 pb-0 ml-4'><p className='black-text  text-[10px] '>Send</p><ReactSVG src={"/assets/send.svg"} className='ml-2'/> </button>
+              </div>
+          
+      </div>
   </div>
+
+   {/* preview and text ends*/}
   </div>
 <Image
         className='absolute top-0 right-0'

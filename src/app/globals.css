@@ -15,7 +15,9 @@
 .rounded-lg {
   border-radius: 8px; /* Adjust the value to control the roundness of the corners */
 }
-
+.rounded{
+  border-radius: 30px;
+}
 .bg-rgba-opacity {
   background-color: rgba(26, 27, 30, 0.85); /* Replace with your desired RGB color values and opacity */
 }
@@ -25,7 +27,9 @@
 
 
 }
-
+.black-text{
+  color: black;
+}
 table th,tr{
   font-size: 10px;
 }
@@ -45,16 +49,4 @@ td{
   /* background: linear-gradient(to left, #3E3E3E, #979797, #2C2C2C); */
   border-radius: 5px;
 
-}
-
-&::-webkit-slider-thumb {
-
-
-  background: white;
-  cursor: pointer;
-
-
-  &:hover {
-    background: white
-  }
 }

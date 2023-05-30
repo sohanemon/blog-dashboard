@@ -31,7 +31,7 @@ export default function SidebarExtended() {
           <div
             onClick={() => setIsSelected(el.title)}
             key={el.title}
-            className={`flex items-center gap-3 px-3 py-3 capitalize cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl ${
+            className={`flex items-center select-none gap-3 px-3 py-3 capitalize cursor-pointer from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl ${
               isSelected === el.title && 'bg-gradient-to-tr text-white'
             }`}
           >

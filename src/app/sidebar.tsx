@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Logo from './icons/Logo';
 import HomeIcon from './icons/HomeIcon';
@@ -6,16 +7,26 @@ import CreateIcon from './icons/CreateIcon';
 import CommunityIcon from './icons/CommunityIcon';
 import CollectionsIcon from './icons/CollectionsIcon';
 import BountyIcon from './icons/BountyIcon';
+import { useState } from 'react';
 
 export default function Sidebar() {
+  const [isSelected, setIsSelected] = useState('chat');
+  console.log('🛑 ~ Sidebar ~ isSelected:', isSelected);
+
   return (
     <section className='relative bg-themeSlate flex-col items-center flex  w-[77px] min-h-[1024px]'>
       <Logo />
 
       {/* #todo menus */}
-      <div className='absolute space-y-5 top-40'>
+      <div className='absolute z-50 space-y-5 top-40'>
         {menus.map((el) => (
-          <div key={el.title} className='flex flex-col items-center gap-2'>
+          <div
+            onClick={() => console.log('first')}
+            key={el.title}
+            className={`flex flex-col items-center gap-2 from-[#3E3E3E] to-[#979797] via-[#2C2C2C] rounded-2xl p-2 ${
+              isSelected === el.title && 'bg-gradient-to-tr'
+            }`}
+          >
             {el.icon}
             <p className='capitalize text-[8px]'>{el.title}</p>
           </div>

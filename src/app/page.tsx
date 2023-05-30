@@ -1,9 +1,13 @@
-import Basics from "./basics";
-import Prompt from "./prompt";
+'use client';
+import usePage from '@/store';
+import Basics from './basics';
+import Prompt from './prompt';
 
 export default function Home() {
-  return <main className='flex flex-col  grow'>
-    {/* <Prompt/> */}
-    <Basics/>
-  </main>;
+  const page = usePage((s) => s.page);
+  return (
+    <main className='flex flex-col grow'>
+      {page === 'prompt' ? <Prompt /> : <Basics />}
+    </main>
+  );
 }

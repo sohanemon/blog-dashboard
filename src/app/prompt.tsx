@@ -86,7 +86,7 @@ export default function Prompt() {
   
   return (
     <section className='relative bg-themeSlate flex-col items-center flex  w-full min-h-auto'>
-  <div className='absolute z-50 flex'>
+  <div className='absolute z-50 flex flex-col md:flex-row'>
     {/* prompt starts */}
       <div className='w-[448px] min-h-[1010px] rounded-lg bg-rgba-opacity m-5 mb-0'>
       <p className='text-xs font-medium leading-loose p-5 text-white  pb-0'>Prompt</p>

@@ -22,8 +22,24 @@ export default function SidebarExtended() {
       </div>
 
       {/* more menu */}
+      <div>
+        {data?.map((el) => (
+          <div key={el.title}>
+            <ReactSVG src={el.icon} />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
 
-const data = [];
+const data = [
+  {
+    title: 'prompt',
+    icon: '/assets/prompt.svg',
+  },
+  {
+    title: 'basics',
+    icon: '/assets/basics.svg',
+  },
+];

@@ -26,10 +26,7 @@ export default function Sidebar() {
           </div>
         ))}
       </div>
-      <ReactSVG
-        className='h-full grow justify-self-end'
-        src='/assets/logout.svg'
-      />
+      <ReactSVG className='absolute bottom-8' src='/assets/logout.svg' />
       {/* #fix bar section */}
       <Image
         className='absolute top-0 right-0'

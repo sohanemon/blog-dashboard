@@ -20,7 +20,7 @@ export default function Basics() {
               <p className='pb-0 mt-10 mb-3 text-xs font-medium leading-loose text-white'>
                 Description * *
               </p>
-              <input
+              <textarea
                 className='w-full h-[86px] p-3 rounded-md bg-transparent text-[10px] whitespace-normal align-top ml-1'
                 placeholder='For Example: Generate personalized emails like a pro'
               />
